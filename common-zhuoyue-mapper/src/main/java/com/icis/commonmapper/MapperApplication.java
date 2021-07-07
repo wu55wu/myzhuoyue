@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //springboot的一个启动类
 @SpringBootApplication
-//@MapperScan(basePackages = "com.icis.commonmapper.mapper.UserInfoMapper")
+@MapperScan(basePackages = "com.icis.commonmapper.mapper.UserInfoMapper")
 public class MapperApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MapperApplication.class,args);
