@@ -8,63 +8,31 @@
     <artifactId>common-zhuoyue-mapper</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--继承父工程-->
-    <!--父工程 锁定依赖的版本-->
+    <!--导入父工程-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.8</version>
-        <relativePath/>
+        <version>2.4.0</version>
     </parent>
-    <!--导入依赖-->
+    <!--引入依赖  web mysql mybaits -->
     <dependencies>
-        <!--不需要指定版本 因为父工程已经确定 内置tomcat已经做了优化 要做mysql优化
-        注意 如果你导入的依赖 父工程没有版本 那么你必须指定版本
-        -->
+        <!--web依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--开启热部署-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <!--导入springboot整合mybatis依赖
-            一组 这里面需要指定版本号 因为父工程没有-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.3.2</version>
-        </dependency>
-        <!--数据库驱动包 不需要指定版本-->
+        <!--导入mysql驱动包-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--测试的起步依赖-->
+        <!--mybatis起步依赖-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
         </dependency>
-        <!--导入junit单元测试包-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <!-- springBoot JPA的起步依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <!--导入数据源druid-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.9</version>
-        </dependency>
-
+        <!--导入通用mapper依赖包-->
         <!-- 通用mapper -->
         <dependency>
             <groupId>tk.mybatis</groupId>
