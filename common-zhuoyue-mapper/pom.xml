@@ -45,6 +45,15 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--导入lombok-->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <!--打包插件 打成jar包-->
