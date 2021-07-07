@@ -8,5 +8,9 @@ import java.util.List;
 public interface IUserInfoService {
 	//查询所有用户数据
 	List<UserInfo> findAllUser();
+	//查询用户方法 根据主键查询一个用户数据
+	UserInfo findUserByPrimaryKey(UserInfo userInfo);
+	//根据 其他字段查询数据
+	List<UserInfo> findUserByUserProperty(UserInfo userInfo);
 
 }

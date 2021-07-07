@@ -18,6 +18,22 @@ public class IUserInfoServiceImpl implements IUserInfoService {
 	//实现查询所有用户数据
 	@Override
 	public List<UserInfo> findAllUser() {
+		//查询所有 SELECT * FROM user_info
 		return userInfoMapper.selectAll();
 	}
+
+	@Override
+	public UserInfo findUserByPrimaryKey(UserInfo userInfo) {
+		//SELECT * FROM user_info where id=?
+		return this.userInfoMapper.selectByPrimaryKey(userInfo);
+	}
+
+	//根据条件 查询 条件封装到pojo
+	@Override
+	public List<UserInfo> findUserByUserProperty(UserInfo userInfo) {
+		return this.userInfoMapper.select(userInfo);
+	}
+
+
+
 }

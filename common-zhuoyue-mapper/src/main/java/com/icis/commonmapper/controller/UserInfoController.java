@@ -21,4 +21,21 @@ public class UserInfoController {
 		return this.userInfoService.findAllUser();
 	}
 
+	//根据主键查询一个用户
+	@RequestMapping("/getUserByPrimaryKey")
+	public UserInfo getUserByPrimaryKey(String uid){
+		//查询
+		UserInfo userInfo = new UserInfo();
+		userInfo.setId(uid);
+
+		return this.userInfoService.findUserByPrimaryKey(userInfo);
+	}
+
+	//根据 给出的属性 查询数据
+	@RequestMapping("/findUserByProperty")
+	public List<UserInfo> getUserByProperty(UserInfo userInfo){
+		return this.userInfoService.findUserByUserProperty(userInfo);
+	}
+
+
 }
