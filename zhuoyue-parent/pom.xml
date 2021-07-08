@@ -15,6 +15,7 @@
         <module>../zhuoyue-service-util</module>
         <module>../zhuoyue-web-util</module>
         <module>../zhuoyue-user-service</module>
+        <module>../zhuoyue-order-web</module>
     </modules>
     <!--maven中 父工程使用pom打包-->
     <packaging>pom</packaging>
