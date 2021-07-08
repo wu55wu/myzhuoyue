@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common-zhuoyue-mapper/common-zhuoyue-mapper.iml" filepath="$PROJECT_DIR$/common-zhuoyue-mapper/common-zhuoyue-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myzhuoyue.iml" filepath="$PROJECT_DIR$/myzhuoyue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-bean/zhuoyue-bean.iml" filepath="$PROJECT_DIR$/zhuoyue-bean/zhuoyue-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-common-util/zhuoyue-common-util.iml" filepath="$PROJECT_DIR$/zhuoyue-common-util/zhuoyue-common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-interface/zhuoyue-interface.iml" filepath="$PROJECT_DIR$/zhuoyue-interface/zhuoyue-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-parent/zhuoyue-parent.iml" filepath="$PROJECT_DIR$/zhuoyue-parent/zhuoyue-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-service-util/zhuoyue-service-util.iml" filepath="$PROJECT_DIR$/zhuoyue-service-util/zhuoyue-service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-user-service/zhuoyue-user-service.iml" filepath="$PROJECT_DIR$/zhuoyue-user-service/zhuoyue-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhuoyue-web-util/zhuoyue-web-util.iml" filepath="$PROJECT_DIR$/zhuoyue-web-util/zhuoyue-web-util.iml" />
+    </modules>
+  </component>
+</project>
