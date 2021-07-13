@@ -14,7 +14,7 @@ import java.util.List;
 
 //后台管理的控制器
 @Controller
-@CrossOrigin
+@CrossOrigin //解决跨域问题
 public class ManageController {
 	//引用服务  接口
 	@Reference
@@ -56,6 +56,7 @@ public class ManageController {
 	}
 
 	//保存属性和属性值 saveAttrInfo
+	//@RequestBody 把json对象转化为javabean
 	@RequestMapping("/saveAttrInfo")
 	@ResponseBody
 	public void saveAttrInfo(@RequestBody BaseAttrInfo baseAttrInfo){

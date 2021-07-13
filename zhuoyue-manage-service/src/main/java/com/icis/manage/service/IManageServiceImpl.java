@@ -5,6 +5,7 @@ import com.icis.manage.mapper.*;
 import com.icis.pojo.*;
 import com.icis.user.IManageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -70,6 +71,8 @@ public class IManageServiceImpl implements IManageService {
 
 	//保存属性和属性值
 	@Override
+	//做事务控制
+	@Transactional
 	public void saveAttrInfo(BaseAttrInfo baseAttrInfo) {
 		//如果有主键就进行更新属性 没有就插入新属性
 		if (baseAttrInfo.getId()!=null&&baseAttrInfo.getId().length()>0){
@@ -80,15 +83,17 @@ public class IManageServiceImpl implements IManageService {
 			System.out.println("=============baseAttrInfo:"+baseAttrInfo);
 			baseAttrInfoMapper.insertSelective(baseAttrInfo);
 		}
-
+		//把原来的属性值全部清空
+		BaseAttrValue baseAttrValue4Del = new BaseAttrValue();
+		//指定条件 删除哪个value
+		baseAttrValue4Del.setAttrId(baseAttrInfo.getId());
+		baseAttrValueMapper.delete(baseAttrValue4Del);
 		if (baseAttrInfo.getAttrValueList()!=null&&baseAttrInfo.getAttrValueList().size()>0){
-			//把原来的属性值全部清空
-			BaseAttrValue baseAttrValue4Del = new BaseAttrValue();
-			baseAttrValue4Del.setAttrId(baseAttrInfo.getId());
-			baseAttrValueMapper.delete(baseAttrValue4Del);
+
 			for (BaseAttrValue baseAttrValue : baseAttrInfo.getAttrValueList()) {
 				//防止主键赋空值  把主键设置为空 让它自增
 				baseAttrValue.setId(null);
+				//给平台属性值赋值
 				baseAttrValue.setAttrId(baseAttrInfo.getId());
 				baseAttrValueMapper.insertSelective(baseAttrValue);
 			}
